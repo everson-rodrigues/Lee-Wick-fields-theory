@@ -10,13 +10,6 @@
 
 
 (* ::Input::Initialization:: *)
-\[Mu]=10;
-Clear[m,Energy,A];
-Energy[m_]= -p((p^2 \[Sqrt](p^2+  m^2))/((1/\[Mu]+p)\[Sqrt](p^2+  m^2)-p^2))(E^(-A p)/p - E^(-A Sqrt[(p^2+  m^2)])/(\[Sqrt](p^2+  m^2)))^2
-Der[m_]=-((2 (-E^(-A p)+E^(-A Sqrt[m^2+p^2])) p^3 Sqrt[m^2+p^2] (E^(-A p)/p-E^(-A Sqrt[m^2+p^2])/Sqrt[m^2+p^2]))/(-p^2+Sqrt[m^2+p^2] (p+1/\[Mu])))
-FInt[m_]:=NIntegrate[-Der[m],{p,0,\[Infinity]}, AccuracyGoal->10]
-FinalEnergy[m_]:=NIntegrate[Energy[m],{p,0,\[Infinity]}, AccuracyGoal->10];
-
 
 (* ::Subsubsection:: *)
 (*Multiple Values m Plot  Energy*)
